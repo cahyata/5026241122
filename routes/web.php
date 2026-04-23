@@ -14,8 +14,33 @@ Route::get('halo', function () {
 Route::get('blog', function () {
 	return view('blog');
 });
-Route::get('pert5', function () {
+
+Route::get('prt6', function () {
+	return view('linktree');
+});
+
+Route::get('prt5', function () {
 	return view('pertemuan5');
+});
+
+Route::get('prt4', function () {
+	return view('week4');
+});
+
+Route::get('prt3', function () {
+	return view('responsive');
+});
+
+Route::get('prt2', function () {
+    return view('news1');
+});
+
+Route::get('prt1', function () {
+    return view('intro');
+});
+
+Route::get('menu', function () {
+    return view('menu');
 });
 
 Route::get('dosen', [DosenController::class, 'index']);
