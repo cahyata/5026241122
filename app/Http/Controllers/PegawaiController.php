@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PegawaiController extends Controller
 {
     //
-    public function index($nama){
+    public function index2($nama){
 
     	return $nama;
 
@@ -18,6 +18,7 @@ class PegawaiController extends Controller
     	return view('formulir');
 
     }
+
 
 public function proses(Request $request){
         $nama = $request->input('nama');
