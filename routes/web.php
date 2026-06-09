@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\KabelController;
 
 
 Route::get('/', function () {
@@ -81,3 +82,11 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+//route CRUD kabel
+Route::get('/kabel', [KabelController::class, 'index'])->name('kabel.index');
+Route::get('/kabel/create', [KabelController::class, 'create'])->name('kabel.create');
+Route::post('/kabel', [KabelController::class, 'store'])->name('kabel.store');
+Route::get('/kabel/{id}/edit', [KabelController::class, 'edit'])->name('kabel.edit');
+Route::put('/kabel/{id}', [KabelController::class, 'update'])->name('kabel.update');
+Route::delete('/kabel/{id}', [KabelController::class, 'destroy'])->name('kabel.destroy');
