@@ -30,7 +30,6 @@
                 <td>
                     <a href="{{ route('siswa.edit', $row->NRP) }}" class="btn btn-warning">Edit</a>
 
-
                     <form action="{{ route('siswa.destroy', $row->NRP) }}" method="POST" style="display:inline;"
                         onsubmit="return confirm('Yakin ingin menghapus data ini?')">
                         @csrf

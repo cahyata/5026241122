@@ -12,6 +12,12 @@
 
     <br><br>
 
+    <p>Cari Data Kabel :</p>
+    <form action="{{ route('kabel.cari') }}" method="GET">
+        <input type="text" name="cari" placeholder="Cari Kabel .." class="form-control">
+        <input type="submit" value="CARI" class="btn btn-success">
+    </form>
+
     <table class="table table-striped table-hover">
         <tr>
             <th>Kode Kabel</th>

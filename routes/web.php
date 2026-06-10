@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KabelController;
+use App\Http\Controllers\KeranjangController;
 
 
 Route::get('/', function () {
@@ -90,3 +91,12 @@ Route::post('/kabel', [KabelController::class, 'store'])->name('kabel.store');
 Route::get('/kabel/{id}/edit', [KabelController::class, 'edit'])->name('kabel.edit');
 Route::put('/kabel/{id}', [KabelController::class, 'update'])->name('kabel.update');
 Route::delete('/kabel/{id}', [KabelController::class, 'destroy'])->name('kabel.destroy');
+Route::get('/kabel/cari',[KabelController::class, 'cari'])->name('kabel.cari');
+
+//route CRUD keranjang soal laki-laki
+Route::get('/keranjangbelanja', [KeranjangController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjangbelanja/create', [KeranjangController::class, 'create'])->name('keranjangbelanja.create');
+Route::post('/keranjangbelanja', [KeranjangController::class, 'store'])->name('keranjangbelanja.store');
+Route::put('/keranjangbelanja/{id}', [KeranjangController::class, 'update'])->name('keranjangbelanja.update');
+Route::delete('/keranjangbelanja/{id}', [KeranjangController::class, 'destroy'])->name('keranjangbelanja.destroy');
+Route::get('/keranjangbelanja/cari', [KeranjangController::class, 'cari'])->name('keranjangbelanja.cari');

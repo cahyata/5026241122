@@ -75,4 +75,19 @@ class KabelController extends Controller
 
         return redirect()->route('kabel.index')->with('success', 'Data kabel berhasil dihapus.');
     }
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    		// mengambil data dari table kabel sesuai pencarian data
+		$kabel = DB::table('kabel')
+		->where('MerkKabel','like',"%".$cari."%")
+		->paginate();
+
+    		// mengirim data kabel ke view index
+		return view('kabel.index', ['kabel' => $kabel]);
+
+	}
 }

@@ -30,13 +30,13 @@
                         <a class="nav-link" href="{{ route('siswa.index') }}">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Latihan 1</a>
+                        <a class="nav-link" href="{{ route('keranjangbelanja.index') }}">D4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Latihan 2</a>
+                        <a class="nav-link" href="/e5">E5</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/eas">EAS</a>
                     </li>
                 </ul>
             </div>
