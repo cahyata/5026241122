@@ -97,6 +97,5 @@ Route::get('/kabel/cari',[KabelController::class, 'cari'])->name('kabel.cari');
 Route::get('/keranjangbelanja', [KeranjangController::class, 'index'])->name('keranjangbelanja.index');
 Route::get('/keranjangbelanja/create', [KeranjangController::class, 'create'])->name('keranjangbelanja.create');
 Route::post('/keranjangbelanja', [KeranjangController::class, 'store'])->name('keranjangbelanja.store');
-Route::put('/keranjangbelanja/{id}', [KeranjangController::class, 'update'])->name('keranjangbelanja.update');
 Route::delete('/keranjangbelanja/{id}', [KeranjangController::class, 'destroy'])->name('keranjangbelanja.destroy');
-Route::get('/keranjangbelanja/cari', [KeranjangController::class, 'cari'])->name('keranjangbelanja.cari');
+

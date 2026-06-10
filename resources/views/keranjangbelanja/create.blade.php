@@ -23,7 +23,7 @@
                 <div class="row mb-3">
                     <label for="KodeBarang" class="col-sm-2 col-form-label">Kode Barang</label>
                     <div class="col-sm-10">
-                        <input type="text" name="KodeBarang" id="kodebarang" min="0" value="{{ old('KodeBarang') }}" class="form-control" >
+                        <input type="text" name="KodeBarang" id="kodebarang"  value="{{ old('KodeBarang') }}" class="form-control" >
                     </div>
                 </div>
 

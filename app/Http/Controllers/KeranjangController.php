@@ -25,7 +25,7 @@ class KeranjangController extends Controller
     {
         $request->validate([
 
-            'KodeBarang' => 'required|integer|max:0',
+            'KodeBarang' => 'required|integer|min:0',
             'Jumlah' => 'required|integer|min:0',
             'Harga' => 'required|integer|min:0',
         ]);
@@ -45,7 +45,7 @@ class KeranjangController extends Controller
     public function update(Request $request, $kodeKabel)
     {
         $request->validate([
-            'KodeBarang' => 'required|integer|max:0',
+            'KodeBarang' => 'required|integer|min:0',
             'Jumlah' => 'required|integer|min:0',
             'Harga' => 'required|integer|min:0',
         ]);
