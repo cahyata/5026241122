@@ -1,13 +1,13 @@
 @extends('template')
-@section('title', 'Data Keranjang Belanja')
+@section('judul_halaman', 'Data Keranjang Belanja')
 @section('konten')
 
-    <h2>Data Keranjang Belanja</h2>
+
 
     @if (session('success'))
         <p style="color: green;">{{ session('success') }}</p>
     @endif
-
+<br />
     <a href="{{ route('keranjangbelanja.create') }}" class="btn btn-primary">Beli</a>
 
     <br><br>

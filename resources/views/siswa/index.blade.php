@@ -1,13 +1,13 @@
 @extends('template')
-@section('title', 'Data Siswa')
+@section('judul_halaman', 'Data Siswa')
 @section('konten')
 
-    <h2>Data Siswa</h2>
+
 
     @if (session('success'))
         <p style="color: green;">{{ session('success') }}</p>
     @endif
-
+<br />
     <a href="{{ route('siswa.create') }}" class="btn btn-primary">Tambah Siswa</a>
 
     <br><br>

@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KabelController;
 use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\NilaiKuliahController;
 
 
 Route::get('/', function () {
@@ -99,3 +100,7 @@ Route::get('/keranjangbelanja/create', [KeranjangController::class, 'create'])->
 Route::post('/keranjangbelanja', [KeranjangController::class, 'store'])->name('keranjangbelanja.store');
 Route::delete('/keranjangbelanja/{id}', [KeranjangController::class, 'destroy'])->name('keranjangbelanja.destroy');
 
+//route CRUD nilai kuliah
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
+Route::get('/nilaikuliah/create', [NilaiKuliahController::class, 'create'])->name('nilaikuliah.create');
+Route::post('/nilaikuliah', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');

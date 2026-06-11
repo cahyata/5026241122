@@ -33,7 +33,7 @@
                         <a class="nav-link" href="{{ route('keranjangbelanja.index') }}">D4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/e5">E5</a>
+                        <a class="nav-link" href="{{ route('nilaikuliah.index') }}">E5</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/eas">EAS</a>

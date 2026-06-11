@@ -2,12 +2,12 @@
 @section('title', 'Data Kabel')
 @section('konten')
 
-    <h2>Data Kabel</h2>
+
 
     @if (session('success'))
         <p style="color: green;">{{ session('success') }}</p>
     @endif
-
+<br />
     <a href="{{ route('kabel.create') }}" class="btn btn-primary">Tambah Kabel</a>
 
     <br><br>
