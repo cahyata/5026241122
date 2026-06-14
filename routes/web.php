@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KabelController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\BukuController;
 
 
 Route::get('/', function () {
@@ -104,3 +105,8 @@ Route::delete('/keranjangbelanja/{id}', [KeranjangController::class, 'destroy'])
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
 Route::get('/nilaikuliah/create', [NilaiKuliahController::class, 'create'])->name('nilaikuliah.create');
 Route::post('/nilaikuliah', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
+
+
+//route CRUD buku (latihan)
+Route::get('/buku', [BukuController::class, 'index'])->name('buku.index');
+Route::post('/buku/{id}', [BukuController::class, 'pinjam'])->name('buku.pinjam');
