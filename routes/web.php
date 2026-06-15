@@ -10,6 +10,7 @@ use App\Http\Controllers\KabelController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\MyKaryawanController;
 
 
 Route::get('/', function () {
@@ -110,3 +111,7 @@ Route::post('/nilaikuliah', [NilaiKuliahController::class, 'store'])->name('nila
 //route CRUD buku (latihan)
 Route::get('/buku', [BukuController::class, 'index'])->name('buku.index');
 Route::post('/buku/{id}', [BukuController::class, 'pinjam'])->name('buku.pinjam');
+
+//route CRUD karyawan
+Route::get('/eas', [MyKaryawanController::class, 'index'])->name('karyawan.index');
+Route::get('/eas/{id}/view', [MyKaryawanController::class, 'view'])->name('karyawan.view');
